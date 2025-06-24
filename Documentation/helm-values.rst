@@ -1168,6 +1168,10 @@
      - Enables masquerading to the source of the route for traffic leaving the node from endpoints.
      - bool
      - ``false``
+   * - :spelling:ignore:`EnableIPv4MasqueradeDualPortRange`
+     - Enables IPv4 masquerading to use a dual port range for the masquerade port. This is useful for environments that require a large number of connections to be masqueraded.
+     - bool
+     - ``false``
    * - :spelling:ignore:`enableNonDefaultDenyPolicies`
      - Enable Non-Default-Deny policies
      - bool

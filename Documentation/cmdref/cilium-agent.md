@@ -146,6 +146,7 @@ cilium-agent [flags]
       --enable-ipv4-big-tcp                                       Enable IPv4 BIG TCP option which increases device's maximum GRO/GSO limits for IPv4
       --enable-ipv4-fragment-tracking                             Enable IPv4 fragments tracking for L4-based lookups (default true)
       --enable-ipv4-masquerade                                    Masquerade IPv4 traffic from endpoints leaving the host (default true)
+      --enable-ipv4-masq-dual-port-range                          Enable dual-port range when ipv4 masquerade was enabled (default false)
       --enable-ipv6                                               Enable IPv6 support (default true)
       --enable-ipv6-big-tcp                                       Enable IPv6 BIG TCP option which increases device's maximum GRO/GSO limits for IPv6
       --enable-ipv6-fragment-tracking                             Enable IPv6 fragments tracking for L4-based lookups (default true)

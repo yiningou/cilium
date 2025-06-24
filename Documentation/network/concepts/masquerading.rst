@@ -108,6 +108,24 @@ preceding output shows the exclusion CIDR of ``cilium status``
     from the iptables-based masquerading on that aspect. This limitation is
     tracked at :gh-issue:`17177`.
 
+Dual-port range for masquerading
+**********************************
+
+For environments that require a large number of connections to be masqueraded,
+Cilium can be configured to use two separate port ranges for SNAT. This
+effectively increases the number of available ports for masquerading.
+
+When enabled, the following port ranges are used for SNAT:
+
+- ``1024-29999``
+- ``32768-65535``
+
+This feature can be enabled with the Helm option ``enableIPv4MasqueradeDualPortRange: true`` or the agent flag ``--enable-ipv4-masq-dual-port-range``.
+
+.. note::
+
+   This feature requires eBPF-based ipv4 masquerading to be enabled (``enable-ipv4-masquerade=true``).
+
 To allow more fine-grained control, Cilium implements `ip-masq-agent
 <https://github.com/kubernetes-sigs/ip-masq-agent>`_ in eBPF which can be
 enabled with the ``ipMasqAgent.enabled=true`` helm option.
